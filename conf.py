@@ -55,7 +55,7 @@ nitpicky = True
 
 # Extension config
 # Theme config
-html_theme_options = {'style_nav_header_background': '#ed1b2f'}
+# html_theme_options = {'style_nav_header_background': '#ed1b2f'}
 
 # Sphinx gallery
 sphinx_gallery_conf = {
