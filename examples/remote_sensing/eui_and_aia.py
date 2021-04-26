@@ -4,6 +4,7 @@ Carrington map reprojection
 """
 ###############################################################################
 # Importing required modules.
+import aiapy.calibrate
 from astropy.coordinates import SkyCoord
 import astropy.units as u
 from astropy.wcs import WCS
@@ -51,6 +52,10 @@ files = Fido.fetch(result[0, 0])
 print(files)
 
 aia_map = sunpy.map.Map(files[0])
+aia_map = aiapy.calibrate.normalize_exposure(aia_map)
+# This is an empirical correction factor to make the two maps have equal
+# histograms in quiet Sun regions
+aia_map = sunpy.map.Map(aia_map.data * 126 / 98, aia_map.meta)
 aia_map.meta['rsun_ref'] = sunpy.sun.constants.radius.to_value(u.m)
 
 ###############################################################################
@@ -65,7 +70,7 @@ aia_map.plot(axes=ax, vmin=0)
 # Cereate output header
 
 # This is set deliberately low to reduce memory consumption
-shape_out = (180, 360)
+shape_out = (360, 720)
 
 header = sunpy.map.make_fitswcs_header(shape_out,
                                        SkyCoord(0, 0, unit=u.deg,
@@ -79,8 +84,7 @@ out_wcs = WCS(header)
 ###############################################################################
 # Reproject
 array, footprint = reproject_and_coadd([eui_map, aia_map], out_wcs, shape_out,
-                                       reproject_function=reproject_interp,
-                                       background_reference=0, match_background=True)
+                                       reproject_function=reproject_interp)
 
 outmap = sunpy.map.Map((array, header))
 outmap.plot_settings = aia_map.plot_settings

@@ -1,3 +1,4 @@
+aiapy==0.5.0
 astropy==4.2.1
 matplotlib==3.4.1
 reproject==0.7.1
