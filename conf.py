@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'solar_orbiter_python'
+project = 'Solar Orbiter Python'
 copyright = '2021, David Stansby'
 author = 'David Stansby'
 
@@ -27,7 +27,8 @@ author = 'David Stansby'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['sphinx_gallery.gen_gallery']
+extensions = ['sphinx_gallery.gen_gallery',
+              'sphinx_rtd_theme']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -43,7 +44,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'alabaster'
+html_theme = 'sphinx_rtd_theme'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -53,6 +54,9 @@ html_static_path = ['_static']
 nitpicky = True
 
 # Extension config
+# Theme config
+html_theme_options = {'style_nav_header_background': '#ed1b2f'}
+
 # Sphinx gallery
 sphinx_gallery_conf = {
     'examples_dirs': 'examples',
