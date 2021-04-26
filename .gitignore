@@ -1,2 +1,3 @@
 # Sphinx files
 _build/*
+_examples_build/*
