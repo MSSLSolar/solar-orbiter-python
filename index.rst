@@ -2,7 +2,7 @@ Solar Orbiter Python examples
 =============================
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: Contents:
 
    _examples_build/index

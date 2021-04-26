@@ -1,4 +1,5 @@
 matplotlib==3.4.1
+sunpy-soar==1.0b1
 sphinx==3.5.4
 sphinx-gallery==0.9.0
 sphinx-rtd-theme==0.5.2
