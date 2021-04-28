@@ -1,2 +1,2 @@
-Solar Orbiter Python examples
-=============================
+The examples
+============

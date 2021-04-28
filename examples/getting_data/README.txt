@@ -1,2 +1,2 @@
-Searching for data
-------------------
+Getting data
+------------
