@@ -8,6 +8,14 @@ Solar Orbiter Python examples
    _examples_build/index
 
 
+.. toctree::
+  :maxdepth: 1
+  :caption: Contents:
+
+  contributing
+
+
+
 
 Indices and tables
 ==================
