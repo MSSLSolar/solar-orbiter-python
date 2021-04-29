@@ -1,6 +1,6 @@
 """
-SPICE orbit plotting
-====================
+Orbits from SPICE kernels
+=========================
 Generating orbits from SPICE kernels.
 
 In this example we'll download the Solar Orbiter SPICE kernel, and plot
