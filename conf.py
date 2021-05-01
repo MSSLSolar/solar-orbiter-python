@@ -27,7 +27,8 @@ author = 'David Stansby'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['sphinx_gallery.gen_gallery',
+extensions = ['sphinx.ext.intersphinx',
+              'sphinx_gallery.gen_gallery',
               'sphinx_rtd_theme']
 
 # Add any paths that contain templates here, relative to this directory.
@@ -61,5 +62,17 @@ nitpicky = True
 sphinx_gallery_conf = {
     'examples_dirs': 'examples',
     'gallery_dirs': '_examples_build',
-    'filename_pattern': r'.*\.py'
+    'filename_pattern': r'.*\.py',
+    'reference_url': {},
+}
+
+# Intersphinx
+intersphinx_mapping = {
+    'python': ('https://docs.python.org/3', None),
+    'aiapy': ('https://aiapy.readthedocs.io/en/stable', None),
+    'astropy': ('https://docs.astropy.org/en/stable/', None),
+    'heliopy': ('https://docs.heliopy.org/en/stable/', None),
+    'matplotlib': ('https://matplotlib.org/stable', None),
+    'reproject': ('https://reproject.readthedocs.io/en/stable/', None),
+    'sunpy': ('https://docs.sunpy.org/en/stable/', None)
 }
