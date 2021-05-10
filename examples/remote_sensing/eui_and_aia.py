@@ -13,21 +13,22 @@ an SDO/AIA 171A image to create an almost-complete map of the Sun. This
 is done by reprojecting each map into a Carrington frame of reference,
 and adding them together.
 """
+
 ###############################################################################
 # First import the required modules.
-import aiapy.calibrate
-from astropy.coordinates import SkyCoord
-import astropy.units as u
-from astropy.wcs import WCS
 import matplotlib.pyplot as plt
-from reproject import reproject_interp
-from reproject.mosaicking import reproject_and_coadd
-import sunpy_soar
-from sunpy.coordinates import HeliographicCarrington, HeliographicStonyhurst
+
+import aiapy.calibrate
+import astropy.units as u
 import sunpy.map
 import sunpy.sun.constants
+import sunpy_soar
+from astropy.coordinates import SkyCoord
+from astropy.wcs import WCS
+from reproject import reproject_interp
+from reproject.mosaicking import reproject_and_coadd
+from sunpy.coordinates import HeliographicCarrington, HeliographicStonyhurst
 from sunpy.net import Fido
-
 from sunpy.net.attrs import Instrument, Level, Time, Wavelength
 from sunpy_soar.attrs import Identifier
 

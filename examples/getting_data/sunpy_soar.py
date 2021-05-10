@@ -6,7 +6,6 @@ Searching the Solar Orbiter archive (SOAR)
 # Importing required modules.
 import sunpy_soar
 from sunpy.net import Fido
-
 from sunpy.net.attrs import Instrument, Level, Time
 from sunpy_soar.attrs import Identifier
 
