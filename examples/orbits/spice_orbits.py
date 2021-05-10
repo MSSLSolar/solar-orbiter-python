@@ -10,13 +10,12 @@ its orbit for the first year.
 
 from datetime import datetime, timedelta
 
-import astropy.units as u
+import matplotlib.pyplot as plt
 import numpy as np
 
-import heliopy.spice as spice
+import astropy.units as u
 import heliopy.data.spice as spicedata
-
-import matplotlib.pyplot as plt
+import heliopy.spice as spice
 
 ###############################################################################
 # Load the Solar Orbiter spice kernel. HelioPy will automatically fetch and
