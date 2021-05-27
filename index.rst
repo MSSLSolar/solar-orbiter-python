@@ -9,7 +9,7 @@ for the Solar Orbiter mission, using Python.
    :caption: The examples:
 
    _examples_build/index
-   
+
 Running the examples
 --------------------
 All the examples are self contained python scripts. The complete list of packages needed to run
@@ -20,9 +20,6 @@ all of the examples is:
 
 Note that the version numbers listed are the specific package versions used to generate the output
 for this website. It is likely that examples will run with other package versions too.
-
-
-
 
 .. toctree::
   :maxdepth: 2
