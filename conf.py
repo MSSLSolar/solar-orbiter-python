@@ -74,5 +74,6 @@ intersphinx_mapping = {
     'heliopy': ('https://docs.heliopy.org/en/stable/', None),
     'matplotlib': ('https://matplotlib.org/stable', None),
     'reproject': ('https://reproject.readthedocs.io/en/stable/', None),
-    'sunpy': ('https://docs.sunpy.org/en/stable/', None)
+    'sunpy': ('https://docs.sunpy.org/en/stable/', None),
+    'plasmapy': ('https://docs.plasmapy.org/en/stable', None)
 }
