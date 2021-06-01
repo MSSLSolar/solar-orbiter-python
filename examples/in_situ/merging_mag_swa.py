@@ -10,6 +10,7 @@ import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
 
+from astropy.time import Time
 from heliopy.data.solo import download
 import plasmapy.formulary
 from sunpy.timeseries import GenericTimeSeries
@@ -21,14 +22,14 @@ quantity_support()
 matplotlib.rcParams['date.converter'] = 'concise'
 
 ###############################################################################
-# Download one day of MAG data in normal mode.
-start_time = "2020-07-07"
-end_time = "2020-07-08"
+# Get 12 hours day of MAG data in normal mode.
+start_time = "2020-07-07 12:00:00"
+end_time = "2020-07-08 00:00:00"
 mag_data = download(start_time, end_time, 'MAG-RTN-NORMAL', 'L2')
 print(mag_data.columns)
 
 ###############################################################################
-# Download one day of SWA/PAS ground moments.
+# Get 12 hours of SWA/PAS ground moments.
 swa_data = download(start_time, end_time, 'SWA-PAS-GRND-MOM', 'L2')
 print(swa_data.columns)
 
@@ -52,6 +53,9 @@ ax.plot(mag_data.index, mag_data.quantity('B_RTN_0'),
         label='Original')
 ax.plot(mag_reindexed.index, mag_reindexed.quantity('B_RTN_0'),
         label='Re-indexed')
+# Zoom in to see individual data points
+ax.set_xlim(Time("2020-07-07 23:55:00").plot_date,
+            Time(end_time).plot_date)
 ax.legend()
 
 ###############################################################################
