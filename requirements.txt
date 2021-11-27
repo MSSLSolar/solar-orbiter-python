@@ -1,4 +1,4 @@
-aiapy==0.6.0
+aiapy==0.6.3
 astropy==4.3.1
 heliopy[data,spice]==0.15.4
 matplotlib==3.5.0
