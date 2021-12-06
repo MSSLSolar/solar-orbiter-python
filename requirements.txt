@@ -2,7 +2,7 @@ aiapy==0.6.3
 astropy==4.3.1
 heliopy[data,spice]==0.15.4
 matplotlib==3.5.0
-plasmapy==0.6.0
+plasmapy==0.7.0
 reproject==0.8
 sunpy==3.1.2
 sunpy-soar==1.1
